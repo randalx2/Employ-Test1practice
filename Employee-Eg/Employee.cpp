@@ -12,47 +12,27 @@ Employee::Employee()
 	nameEmployee = "Johnny Bravo";
 	staffNo = 202515355;
 	totalSalary = 0;
-	//numberOfEmployees++;  //Whenever ever an object is created increase employee count --DONT CALL THIS TWICE
+	cout << "Base Constructor Called" << endl;
 }
 
 
 Employee::~Employee()
 {
-	numberOfEmployees--;  //decrease employee count when object is deleted
+	numberOfEmployees--;
+	cout << "Base Destructor Called" << endl;
 }
 
 int Employee::numberOfEmployees = 0; //Initializing the static variable outside the class
 
-/*Employee::Employee(const string iname, const int inumber)
-{
-	nameEmployee = iname;
-	
-	if (inumber >= 0)
-	{
-		staffNo = inumber;
-	}
-	else
-	{
-		cout << "Invalid staff number. Try again now" << endl;
-		cin >> staffNo;
-	}
-
-	totalSalary = 0;
-	numberOfEmployees++;
-}*/
-
-Employee::~Employee()
-{
-	//numberOfEmployees--;  Don't decrement here since this will happen twice if sub class calls its destructor
-}
 
 SalaryEmployee::SalaryEmployee()
 {
-	
+	cout << "SalaryEmployee Constuctor Called" << endl;
 }
 
 SalaryEmployee::SalaryEmployee(const string iname, const int inumber)
 {
+	cout << "SalaryEmployee Constuctor Called" << endl;
 	nameEmployee = iname;
 
 	if (inumber >= 0)
@@ -71,6 +51,7 @@ SalaryEmployee::SalaryEmployee(const string iname, const int inumber)
 
 SalaryEmployee::~SalaryEmployee()
 {
+	cout << "SalaryEmployee Destructor Called" << endl;
 	numberOfEmployees--;
 }
 
@@ -97,11 +78,12 @@ float SalaryEmployee::salary()
 
 HourlyEmployee::HourlyEmployee()
 {
-	
+	cout << "Hourly Constructor called" << endl;
 }
 
 HourlyEmployee::HourlyEmployee(const string iname, const int inumber)
 {
+	cout << "Hourly Constructor called" << endl;
 	nameEmployee = iname;
 
 	if (inumber >= 0)
@@ -120,6 +102,7 @@ HourlyEmployee::HourlyEmployee(const string iname, const int inumber)
 
 HourlyEmployee::~HourlyEmployee()
 {
+	cout << "Hourly Destructor called" << endl;
 	numberOfEmployees--;
 }
 
@@ -151,14 +134,17 @@ float HourlyEmployee::salary()
 
 CommissionEmployee::CommissionEmployee()
 {
-
+	cout << "Commission Constructor called" << endl;
 }
+
 CommissionEmployee::~CommissionEmployee()
 {
+	cout << "Commission Destructor called" << endl;
 	numberOfEmployees--;
 }
 CommissionEmployee::CommissionEmployee(const string iname, const int inumber)
 {
+	cout << "Commission Constructor called" << endl;
 	nameEmployee = iname;
 
 	if (inumber >= 0)
