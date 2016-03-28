@@ -61,9 +61,20 @@ void SalaryEmployee::setSalary(float imonthSalary)
 	monthSalary = imonthSalary;
 }
 
-void SalaryEmployee::name()
+string SalaryEmployee::name()
 {
-
+	return nameEmployee;
 }
-void staffNumber();
-void salary();
+
+int SalaryEmployee::staffNumber()
+{
+	return staffNo;
+}
+float SalaryEmployee::salary()
+{
+	totalSalary = monthSalary;
+
+	return totalSalary;
+}
+
+
