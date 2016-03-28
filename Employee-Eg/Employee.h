@@ -20,9 +20,9 @@ public:
 	Employee(const string, const int);
 	~Employee();
 
-	virtual void name() = 0;
-	virtual void staffNumber() = 0;
-	virtual void salary() = 0;
+	virtual string name() = 0;
+	virtual int staffNumber() = 0;
+	virtual float salary() = 0;
 };
 
 class SalaryEmployee : public Employee
@@ -35,11 +35,11 @@ public:
 	~SalaryEmployee();
 	SalaryEmployee(float imonthSalary);
 
-	void setSalary();
+	void setSalary(float imonthSalary);
 
-	void name();
-	void staffNumber();
-	void salary();
+	string name();
+	int staffNumber();
+	float salary();
 };
 
 class HourlyEmployee : public Employee
@@ -56,9 +56,9 @@ public:
 	void setHourlyRate();
 	void setHoursWorked();
 
-	void name();
-	void staffNumber();
-	void salary();
+	string name();
+	int staffNumber();
+	float salary();
 
 };
 
@@ -77,6 +77,10 @@ public:
 	void setBaseSalary();
 	void setRate();
 	void setRevenue();
+
+	string name();
+	int staffNumber();
+	float salary();
 
 };
 
