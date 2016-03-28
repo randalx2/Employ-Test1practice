@@ -25,4 +25,59 @@ public:
 	virtual void salary() = 0;
 };
 
+class SalaryEmployee : public Employee
+{
+private:
+	float monthSalary;
+
+public:
+	SalaryEmployee();
+	~SalaryEmployee();
+	SalaryEmployee(float imonthSalary);
+
+	void setSalary();
+
+	void name();
+	void staffNumber();
+	void salary();
+};
+
+class HourlyEmployee : public Employee
+{
+private:
+	float hourlyRate;
+	float hoursWorked;
+
+public:
+	HourlyEmployee();
+	~HourlyEmployee();
+	HourlyEmployee(float ihourlyRate, float ihoursWorked);
+
+	void setHourlyRate();
+	void setHoursWorked();
+
+	void name();
+	void staffNumber();
+	void salary();
+
+};
+
+class CommissionEmployee : public Employee
+{
+private:
+	float basic;
+	float rate;
+	float rev;
+
+public:
+	CommissionEmployee();
+	~CommissionEmployee();
+	CommissionEmployee(float ibasic, float irate, float irev);
+
+	void setBaseSalary();
+	void setRate();
+	void setRevenue();
+
+};
+
 #endif
