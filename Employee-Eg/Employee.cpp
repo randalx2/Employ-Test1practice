@@ -77,4 +77,46 @@ float SalaryEmployee::salary()
 	return totalSalary;
 }
 
+HourlyEmployee::HourlyEmployee()
+{
+
+}
+
+HourlyEmployee::HourlyEmployee(float ihourlyRate, float ihoursWorked)
+{
+	hourlyRate = ihourlyRate;
+	hoursWorked = ihoursWorked;
+}
+
+HourlyEmployee::~HourlyEmployee()
+{
+
+}
+
+void HourlyEmployee::setHourlyRate(float ihourlyRate)
+{
+	hourlyRate = ihourlyRate;
+}
+
+void HourlyEmployee::setHoursWorked(float ihoursWorked)
+{
+	hoursWorked = ihoursWorked;
+}
+
+string HourlyEmployee::name()
+{
+	return nameEmployee;
+}
+
+int HourlyEmployee::staffNumber()
+{
+	return staffNo;
+}
+float HourlyEmployee::salary()
+{
+	totalSalary = hourlyRate*hoursWorked;
+
+	return totalSalary;
+}
+
 

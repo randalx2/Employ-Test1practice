@@ -53,8 +53,8 @@ public:
 	~HourlyEmployee();
 	HourlyEmployee(float ihourlyRate, float ihoursWorked);
 
-	void setHourlyRate();
-	void setHoursWorked();
+	void setHourlyRate(float ihourlyRate);
+	void setHoursWorked(float ihoursWorked);
 
 	string name();
 	int staffNumber();
