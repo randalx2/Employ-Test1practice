@@ -17,7 +17,7 @@ public:
 	static int numberOfEmployees;  //increment upon object creation
 	                                //Initialize outside class
 	Employee();
-	Employee(const string, const int);
+	//Employee(const string, const int); NOT NEEDED AS YOU CAN'T CREATE AN OBJECT OF ABSTRACT CLASS
 	~Employee();
 
 	virtual string name() = 0;
@@ -33,7 +33,7 @@ private:
 public:
 	SalaryEmployee();
 	~SalaryEmployee();
-	SalaryEmployee(float imonthSalary);
+	SalaryEmployee(const string iname, const int inumber);
 
 	void setSalary(float imonthSalary);
 
@@ -51,7 +51,7 @@ private:
 public:
 	HourlyEmployee();
 	~HourlyEmployee();
-	HourlyEmployee(float ihourlyRate, float ihoursWorked);
+	HourlyEmployee(const string iname, const int inumber);
 
 	void setHourlyRate(float ihourlyRate);
 	void setHoursWorked(float ihoursWorked);
@@ -72,11 +72,11 @@ private:
 public:
 	CommissionEmployee();
 	~CommissionEmployee();
-	CommissionEmployee(float ibasic, float irate, float irev);
+	CommissionEmployee(const string iname, const int inumber);
 
-	void setBaseSalary();
-	void setRate();
-	void setRevenue();
+	void setBaseSalary(float ibasic);
+	void setRate(float irate);
+	void setRevenue(float irev);
 
 	string name();
 	int staffNumber();
